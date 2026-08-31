@@ -213,6 +213,10 @@ section[id]{scroll-margin-top:80px}
 .framed::after{content:"";position:absolute;bottom:-1px;right:-1px;width:46px;height:46px;border-bottom:3px solid var(--em);border-right:3px solid var(--em);border-bottom-right-radius:14px}
 .framed .ph{border-radius:8px;overflow:hidden;position:relative;background:var(--bg2)}
 .framed .ph img{width:100%;height:auto;display:block}
+/* Retrato en el bloque enmarcado del hero: cuadrado y recortado con cover,
+   para que el encuadre no dependa de la proporcion del archivo original. */
+.framed .ph.retrato{aspect-ratio:1/1}
+.framed .ph.retrato img{height:100%;object-fit:cover;object-position:center 22%}
 .tag-badge{position:absolute;left:-20px;bottom:-20px;background:var(--em-d);color:#fff;font-family:var(--display);font-weight:800;font-size:1rem;padding:14px 22px;border-radius:10px;box-shadow:0 18px 36px -18px rgba(4,120,87,.75);text-transform:uppercase;letter-spacing:.02em;white-space:nowrap}
 .tag-badge span{display:block;font-size:.56rem;font-weight:600;letter-spacing:.2em;opacity:.9}
 /* ÁREAS (cards con foto) */
@@ -417,6 +421,8 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
   .why-grid{grid-template-columns:1fr}
   .equipo,.proc-top{grid-template-columns:1fr;gap:40px}
   .equipo-media{max-width:440px}
+  /* el retrato original mide 556px: no lo escalamos por encima de eso */
+  .hero-media{max-width:440px}
   .contact-media{max-width:360px}
   .areas-grid{grid-template-columns:1fr}
   .hon-grid{grid-template-columns:1fr}
@@ -499,14 +505,14 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
       </div>
       <div class="hero-media reveal">
         <div class="framed">
-          <div class="ph">
+          <div class="ph retrato">
             <picture>
-              <source srcset="img/cadiz.webp" type="image/webp">
-              <img src="img/cadiz.jpg" alt="Vista de la catedral de Cádiz desde el paseo marítimo" width="900" height="620" loading="eager" fetchpriority="high" decoding="async">
+              <source srcset="img/alba.webp" type="image/webp">
+              <img src="img/alba.jpg" alt="Alba María Hoyo Coello, abogada de MHC Abogados, en la sede del despacho en Cádiz" width="556" height="596" loading="eager" fetchpriority="high" decoding="async">
             </picture>
           </div>
         </div>
-        <div class="tag-badge"><span>Despacho en</span>CÁDIZ</div>
+        <div class="tag-badge">ABOGADA · CÁDIZ</div>
       </div>
     </div>
     <div class="hero-stats reveal">
