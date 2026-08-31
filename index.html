@@ -253,16 +253,20 @@ section[id]{scroll-margin-top:80px}
 .why-c h4{font-size:.98rem;text-transform:uppercase;letter-spacing:0}
 .why-c p{color:var(--muted);font-size:.87rem;margin-top:11px}
 /* EQUIPO — bloque editorial: foto real a un lado, descripcion al otro */
-.equipo{display:grid;grid-template-columns:.82fr 1.18fr;gap:60px;align-items:center;margin-top:64px}
-.equipo-media{position:relative}
+.equipo{display:grid;grid-template-columns:.82fr 1.18fr;gap:60px;align-items:start;margin-top:64px}
 .equipo-copy h3{font-size:clamp(1.5rem,3.2vw,2.15rem);color:var(--em-d);text-transform:uppercase;letter-spacing:-.02em;margin-top:16px}
 .equipo-rol{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--soft);border:1px solid var(--border);color:var(--em-dd);font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.64rem;padding:8px 14px;border-radius:100px}
 .equipo-copy p{color:var(--muted);font-size:1.01rem;margin-top:20px}
 .equipo-copy p strong{color:var(--text);font-weight:600}
-.equipo-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.equipo-tag{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:11px;padding:11px 15px;font-size:.84rem;color:var(--text);background:#fff}
-.equipo-tag svg{width:16px;height:16px;color:var(--em-d);flex-shrink:0}
-.equipo-copy .btn{margin-top:30px}
+.equipo-quote{position:relative;margin-top:30px;padding:24px 26px 24px 30px;background:var(--bg2);border-left:4px solid var(--em);border-radius:0 14px 14px 0}
+.equipo-quote svg{position:absolute;top:16px;right:20px;width:30px;height:30px;color:var(--em-l);opacity:.5}
+.equipo-quote p{margin:0;color:var(--text);font-size:1.02rem;font-style:italic;line-height:1.62;padding-right:34px}
+.equipo-form{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+.equipo-form h4{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;color:var(--em-dd)}
+.equipo-form ul{list-style:none;margin-top:18px;display:grid;gap:12px}
+.equipo-form li{display:flex;gap:12px;font-size:.9rem;color:var(--muted);line-height:1.55}
+.equipo-form li svg{width:17px;height:17px;color:var(--em-d);flex-shrink:0;margin-top:4px}
+.equipo-copy .btn{margin-top:32px}
 /* PROCESO — cabecera con imagen */
 .proc-top{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;margin-bottom:56px}
 /* CONTACTO — foto real de la sede */
@@ -745,16 +749,21 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
         <span class="eyebrow">Equipo</span>
         <h3>Alba María<br>Hoyo Coello</h3>
         <span class="equipo-rol">Abogada · MHC Abogados</span>
-        <p>Abogada de MHC Abogados, <strong>especializada en Ley de Segunda Oportunidad y en cláusulas abusivas</strong>, que son las dos materias en las que el despacho concentra su trabajo.</p>
-        <p>Lleva los asuntos con <strong>trato próximo y atención personalizada</strong>: contacto directo para resolver dudas, información del estado del procedimiento en todo momento y un estudio previo de la documentación antes de que tomes ninguna decisión.</p>
-        <div class="equipo-tags">
-          <span class="equipo-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Segunda Oportunidad</span>
-          <span class="equipo-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cláusulas abusivas</span>
-          <span class="equipo-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Trato próximo</span>
-          <span class="equipo-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Atención personalizada</span>
+        <p>Alba es abogada en ejercicio. Su afán por el Derecho Penal nace desde los inicios de sus estudios y continúan durante toda su carrera, comenzando por tareas que estuvo desarrollando como alumna colaboradora en el «Departamento de Derecho Internacional Público, Derecho Penal y Derecho Procesal» de la Universidad de Cádiz, así como la realización de su Trabajo Fin de Grado sobre «La prisión permanente revisable» y su Trabajo Fin de Máster sobre «El asesoramiento a un acusado con Trastorno Mental Grave». Especialista en el ámbito del Derecho Mercantil relacionado con la «Ley de la 2ª Oportunidad».</p>
+        <blockquote class="equipo-quote">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.5 5A5.5 5.5 0 0 0 2 10.5c0 3 2.2 5.3 5 5.3.4 0 .8 0 1.2-.2-.7 1.9-2.3 3.2-4.4 3.6l.6 2.3c4.4-.9 7.4-4.6 7.4-9.6C11.8 7.4 10 5 7.5 5zm10.7 0A5.5 5.5 0 0 0 12.7 10.5c0 3 2.2 5.3 5 5.3.4 0 .8 0 1.2-.2-.7 1.9-2.3 3.2-4.4 3.6l.6 2.3c4.4-.9 7.4-4.6 7.4-9.6C22.5 7.4 20.7 5 18.2 5z"/></svg>
+          <p>La mejor estrategia de defensa que puede diseñar un abogado siempre parte de la versión de los hechos que ofrece el cliente.</p>
+        </blockquote>
+        <div class="equipo-form">
+          <h4>Formación</h4>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Grado en Derecho por la Universidad de Cádiz (UCA).</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Máster de Acceso a la Abogacía por la Universidad de Cádiz en colaboración con el Iltre. Colegio de Abogados de Jerez de la Frontera.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Curso en Violencia de Género impartido por el Excmo. Ayuntamiento de Cádiz, Fundación Municipal de la Mujer.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Curso en Peritaje Judicial.</li>
+          </ul>
         </div>
         <button class="btn" onclick="openChat()">Pedir consulta gratuita</button>
-      </div>
     </div>
   </div>
 </section>
