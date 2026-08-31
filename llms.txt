@@ -20,6 +20,28 @@ tarifas, y el asistente conversacional no da asesoramiento jurídico.
 - Web oficial: https://mhcabogados.com/
 - URL de esta demo: https://nexusforgeia.github.io/WHITEMOON-MHC-ABOGADOS/
 
+## Sobre el despacho
+
+> MHC es un despacho cercano al cliente, que se vuelca en cada asunto para
+> resolverlo de la mejor manera posible. Nuestra premisa es dar una respuesta
+> rápida al cliente y ofrecerle una atención personalizada, guiándole durante
+> todo el proceso de manera transparente.
+
+Los tres pilares del despacho:
+
+- **Cercanía** — Nos gusta tener un contacto directo con el cliente, y ser
+  accesibles para que en todo momento nos pueda consultar sus dudas, o
+  hablarnos de sus objetivos.
+- **Transparencia** — Informamos en todo momento a nuestros clientes de los
+  pasos que damos, así como del estado de sus procedimientos. Realizamos un
+  estudio previo en cada asunto, para que el cliente tenga la máxima
+  información antes de tomar una decisión.
+- **Profesionalidad** — Estamos en constante formación para manejar de la mejor
+  manera posible los asuntos en los que intervenimos. Estamos centrados en la
+  especialidad: ofrecemos aquellos servicios respecto de los que contamos con
+  formación especializada y experiencia previa. El objetivo es acercar al
+  cliente a sus objetivos.
+
 ## Datos clave
 
 - Despacho de abogados en Cádiz.
