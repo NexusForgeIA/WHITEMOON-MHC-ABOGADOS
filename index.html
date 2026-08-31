@@ -246,6 +246,7 @@ section[id]{scroll-margin-top:80px}
 .proc-c p{color:var(--muted);font-size:.87rem;margin-top:11px}
 /* POR QUÉ + EQUIPO */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+.why-grid.pilares{margin-top:64px}
 .why-c{padding:32px 28px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:border-color .35s,transform .35s,box-shadow .35s}
 .why-c:hover{border-color:var(--em-l);transform:translateY(-5px);box-shadow:0 22px 44px -30px rgba(4,120,87,.45)}
 .why-c .ic{width:50px;height:50px;border-radius:13px;background:var(--soft);border:1px solid var(--border);display:grid;place-items:center;color:var(--em-d);margin-bottom:18px}
@@ -253,7 +254,7 @@ section[id]{scroll-margin-top:80px}
 .why-c h4{font-size:.98rem;text-transform:uppercase;letter-spacing:0}
 .why-c p{color:var(--muted);font-size:.87rem;margin-top:11px}
 /* EQUIPO — bloque editorial: foto real a un lado, descripcion al otro */
-.equipo{display:grid;grid-template-columns:.82fr 1.18fr;gap:60px;align-items:start;margin-top:64px}
+.equipo{display:grid;grid-template-columns:.82fr 1.18fr;gap:60px;align-items:start}
 .equipo-copy h3{font-size:clamp(1.5rem,3.2vw,2.15rem);color:var(--em-d);text-transform:uppercase;letter-spacing:-.02em;margin-top:16px}
 .equipo-rol{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--soft);border:1px solid var(--border);color:var(--em-dd);font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.64rem;padding:8px 14px;border-radius:100px}
 .equipo-copy p{color:var(--muted);font-size:1.01rem;margin-top:20px}
@@ -540,9 +541,7 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
     </div>
     <div class="about-grid">
       <div class="about-copy reveal">
-        <p>MHC es un despacho de abogados en Cádiz que se caracteriza por su <strong>proximidad al cliente</strong>, dedicándose de lleno a cada caso para resolverlo de la mejor manera posible. Nuestra premisa es brindar respuestas rápidas y ofrecer una atención personalizada, acompañando al cliente de manera transparente durante todo el proceso.</p>
-        <p>El despacho MHC posee una sólida formación jurídica y experiencia en la resolución de los problemas cotidianos de nuestros clientes. Nuestro equipo se mantiene <strong>constantemente actualizado</strong> para ofrecer el mejor servicio en cada caso que abordamos. Nuestro objetivo es proporcionar a cada cliente la tranquilidad que necesita.</p>
-        <p>Por ello, enfocamos nuestro trabajo desde la <strong>especialización</strong>: solo ofrecemos servicios en los que contamos con la garantía de tener la formación y experiencia necesarias.</p>
+        <p>MHC es un despacho cercano al cliente, que se vuelca en cada asunto para resolverlo de la mejor manera posible. Nuestra premisa es dar una respuesta rápida al cliente y ofrecerle una atención personalizada, guiándole durante todo el proceso de manera transparente.</p>
       </div>
       <div class="about-media reveal">
         <div class="framed">
@@ -555,6 +554,11 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
         </div>
         <div class="tag-badge"><span>Enfoque</span>ESPECIALIZACIÓN</div>
       </div>
+    </div>
+    <div class="why-grid pilares">
+      <div class="why-c reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h4>Cercanía</h4><p>Nos gusta tener un contacto directo con el cliente, y ser accesibles para que en todo momento nos pueda consultar sus dudas, o hablarnos de sus objetivos.</p></div>
+      <div class="why-c reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h4>Transparencia</h4><p>Informamos en todo momento a nuestros clientes de los pasos que damos, así como del estado de sus procedimientos. Realizamos un estudio previo en cada asunto, para que el cliente tenga la máxima información antes de tomar una decisión.</p></div>
+      <div class="why-c reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14M12 3l7 4M12 3 5 7"/><path d="M5 7 2 14a3 3 0 0 0 6 0z"/><path d="m19 7-3 7a3 3 0 0 0 6 0z"/></svg></div><h4>Profesionalidad</h4><p>Estamos en constante formación para manejar de la mejor manera posible los asuntos en los que intervenimos. Estamos centrados en la especialidad: ofrecemos aquellos servicios respecto de los que contamos con formación especializada y experiencia previa. El objetivo es acercar al cliente a sus objetivos.</p></div>
     </div>
   </div>
 </section>
@@ -725,15 +729,6 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
 <section class="sec" id="equipo">
   <span class="bignum" aria-hidden="true" style="left:-2vw;top:20px">05</span>
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Por qué MHC</span>
-      <h2>Cercanía, transparencia<br>y profesionalidad</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-c reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h4>Cercanía</h4><p>Nos gusta tener un contacto directo con el cliente y ser accesibles para que en todo momento nos pueda consultar sus dudas o hablarnos de sus objetivos.</p></div>
-      <div class="why-c reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h4>Transparencia</h4><p>Informamos en todo momento de los pasos que damos y del estado de los procedimientos. Realizamos un estudio previo en cada asunto, para que el cliente tenga la máxima información antes de decidir.</p></div>
-      <div class="why-c reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14M12 3l7 4M12 3 5 7"/><path d="M5 7 2 14a3 3 0 0 0 6 0z"/><path d="m19 7-3 7a3 3 0 0 0 6 0z"/></svg></div><h4>Profesionalidad</h4><p>Estamos en constante formación y centrados en la especialidad: ofrecemos aquellos servicios respecto de los que contamos con formación especializada y experiencia previa.</p></div>
-    </div>
     <div class="equipo">
       <div class="equipo-media reveal">
         <div class="framed">
