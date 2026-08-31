@@ -252,18 +252,22 @@ section[id]{scroll-margin-top:80px}
 .why-c .ic svg{width:26px;height:26px}
 .why-c h4{font-size:.98rem;text-transform:uppercase;letter-spacing:0}
 .why-c p{color:var(--muted);font-size:.87rem;margin-top:11px}
-.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:56px}
-.team-c{border:1px solid var(--line);border-radius:16px;background:#fff;padding:32px 30px;transition:border-color .35s,box-shadow .35s}
-.team-c:hover{border-color:var(--em-l);box-shadow:0 22px 44px -30px rgba(4,120,87,.45)}
-.team-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
-.team-ini{width:60px;height:60px;border-radius:16px;background:var(--em-d);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.2rem;letter-spacing:.02em;flex-shrink:0}
-.team-head h4{font-size:1.1rem}
-.team-head small{display:block;color:var(--em-dd);font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:.62rem;margin-top:6px}
-.team-c p{color:var(--muted);font-size:.9rem;margin-top:12px}
-.team-c .form-t{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.62rem;color:var(--em-dd);margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
-.team-c ul{list-style:none;margin-top:12px;display:grid;gap:9px}
-.team-c li{display:flex;gap:11px;font-size:.85rem;color:var(--muted)}
-.team-c li svg{width:16px;height:16px;color:var(--em-d);flex-shrink:0;margin-top:4px}
+/* EQUIPO — bloque editorial: foto real a un lado, descripcion al otro */
+.equipo{display:grid;grid-template-columns:.82fr 1.18fr;gap:60px;align-items:center;margin-top:64px}
+.equipo-media{position:relative}
+.equipo-copy h3{font-size:clamp(1.5rem,3.2vw,2.15rem);color:var(--em-d);text-transform:uppercase;letter-spacing:-.02em;margin-top:16px}
+.equipo-rol{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--soft);border:1px solid var(--border);color:var(--em-dd);font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.64rem;padding:8px 14px;border-radius:100px}
+.equipo-copy p{color:var(--muted);font-size:1.01rem;margin-top:20px}
+.equipo-copy p strong{color:var(--text);font-weight:600}
+.equipo-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.equipo-tag{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:11px;padding:11px 15px;font-size:.84rem;color:var(--text);background:#fff}
+.equipo-tag svg{width:16px;height:16px;color:var(--em-d);flex-shrink:0}
+.equipo-copy .btn{margin-top:30px}
+/* PROCESO — cabecera con imagen */
+.proc-top{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;margin-bottom:56px}
+/* CONTACTO — foto real de la sede */
+.contact-media{margin-top:36px;max-width:400px}
+.contact-media figcaption{margin-top:12px;font-size:.8rem;color:var(--muted)}
 /* ESPECIALIDADES */
 .areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:6px}
 .area-c{padding:38px 32px;border:1px solid var(--line);border-radius:16px;background:#fff;transition:border-color .35s,transform .35s,box-shadow .35s}
@@ -406,7 +410,9 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
   .svc-grid{grid-template-columns:1fr 1fr}
   .proc-grid{grid-template-columns:1fr 1fr}
   .why-grid{grid-template-columns:1fr}
-  .team-grid{grid-template-columns:1fr}
+  .equipo,.proc-top{grid-template-columns:1fr;gap:40px}
+  .equipo-media{max-width:440px}
+  .contact-media{max-width:360px}
   .areas-grid{grid-template-columns:1fr}
   .hon-grid{grid-template-columns:1fr}
   .hero-stats{grid-template-columns:1fr 1fr}
@@ -597,7 +603,7 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
         <div class="svc-media">
           <picture>
             <source srcset="img/familia.webp" type="image/webp">
-            <img class="svc-img" src="img/familia.jpg" alt="Sala de reuniones discreta con un portátil junto a un ventanal" width="800" height="400" loading="lazy" decoding="async">
+            <img class="svc-img" src="img/familia.jpg" alt="Ventana abierta de una vivienda con vegetación al otro lado" width="800" height="400" loading="lazy" decoding="async">
           </picture>
           <div class="svc-shade"></div>
           <span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 21.5l8.8-8.8a5 5 0 0 0 0-7.1z"/><path d="m8 9 8 6"/></svg></span>
@@ -629,7 +635,7 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
         <div class="svc-media">
           <picture>
             <source srcset="img/contratos.webp" type="image/webp">
-            <img class="svc-img" src="img/contratos.jpg" alt="Mesa de trabajo de oficina con documentos, carpetas y un portátil" width="800" height="400" loading="lazy" decoding="async">
+            <img class="svc-img" src="img/contratos.jpg" alt="Firma de un contrato con bolígrafo sobre la línea de firma" width="800" height="400" loading="lazy" decoding="async">
           </picture>
           <div class="svc-shade"></div>
           <span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span>
@@ -686,10 +692,22 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
 <section class="sec alt" id="proceso">
   <span class="bignum" aria-hidden="true" style="right:-2vw;top:20px">04</span>
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Cómo trabajamos</span>
-      <h2>Así trabajamos<br>tu Segunda Oportunidad</h2>
-      <p>Sabemos que es una situación muy complicada y que por eso necesitas una respuesta rápida y un trato cercano y transparente.</p>
+    <div class="proc-top">
+      <div class="sec-head reveal" style="margin-bottom:0">
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2>Así trabajamos<br>tu Segunda Oportunidad</h2>
+        <p>Sabemos que es una situación muy complicada y que por eso necesitas una respuesta rápida y un trato cercano y transparente.</p>
+      </div>
+      <div class="proc-media reveal">
+        <div class="framed">
+          <div class="ph">
+            <picture>
+              <source srcset="img/proceso.webp" type="image/webp">
+              <img src="img/proceso.jpg" alt="Sala de reuniones con mesa larga preparada para una cita de estudio de viabilidad" width="900" height="620" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="proc-grid">
       <div class="proc-c reveal"><span class="n" aria-hidden="true">01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div><h4>Contacto</h4><p>Nos comprometemos a llamarte en un margen de dos horas y te damos cita en nuestra oficina en un plazo máximo de una semana para realizar el estudio de viabilidad.</p></div>
@@ -712,36 +730,30 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
       <div class="why-c reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h4>Transparencia</h4><p>Informamos en todo momento de los pasos que damos y del estado de los procedimientos. Realizamos un estudio previo en cada asunto, para que el cliente tenga la máxima información antes de decidir.</p></div>
       <div class="why-c reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14M12 3l7 4M12 3 5 7"/><path d="M5 7 2 14a3 3 0 0 0 6 0z"/><path d="m19 7-3 7a3 3 0 0 0 6 0z"/></svg></div><h4>Profesionalidad</h4><p>Estamos en constante formación y centrados en la especialidad: ofrecemos aquellos servicios respecto de los que contamos con formación especializada y experiencia previa.</p></div>
     </div>
-    <div class="team-grid">
-      <div class="team-c reveal">
-        <div class="team-head">
-          <span class="team-ini" aria-hidden="true">IH</span>
-          <div><h4>Ignacio Hernández Meni</h4><small>Abogado · Profesor de Derecho Civil (UCA)</small></div>
+    <div class="equipo">
+      <div class="equipo-media reveal">
+        <div class="framed">
+          <div class="ph">
+            <picture>
+              <source srcset="img/alba.webp" type="image/webp">
+              <img src="img/alba.jpg" alt="Alba María Hoyo Coello, abogada de MHC Abogados, en la sede del despacho en Cádiz" width="556" height="596" loading="lazy" decoding="async">
+            </picture>
+          </div>
         </div>
-        <p>Ignacio compagina el ejercicio de la abogacía con la docencia, como profesor de Derecho Civil en la Universidad de Cádiz. Es autor de artículos científicos y de capítulos de libro en editoriales jurídicas del país.</p>
-        <p>Su visión del Derecho, como la unión de la investigación y la práctica, lo convierte en un profesional muy completo.</p>
-        <div class="form-t">Formación</div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Grado en Derecho — Universidad de Cádiz</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Máster de Acceso a la Abogacía — Universidad Pablo de Olavide (Sevilla)</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Máster de Derecho de la Contratación y Responsabilidad Civil — UPO</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Estudios de Doctorado — Universidad de Cádiz</li>
-        </ul>
       </div>
-      <div class="team-c reveal">
-        <div class="team-head">
-          <span class="team-ini" aria-hidden="true">AH</span>
-          <div><h4>Alba María Hoyo Coello</h4><small>Abogada · Ley de Segunda Oportunidad</small></div>
+      <div class="equipo-copy reveal">
+        <span class="eyebrow">Equipo</span>
+        <h3>Alba María<br>Hoyo Coello</h3>
+        <span class="equipo-rol">Abogada · MHC Abogados</span>
+        <p>Abogada de MHC Abogados, <strong>especializada en Ley de Segunda Oportunidad y en cláusulas abusivas</strong>, que son las dos materias en las que el despacho concentra su trabajo.</p>
+        <p>Lleva los asuntos con <strong>trato próximo y atención personalizada</strong>: contacto directo para resolver dudas, información del estado del procedimiento en todo momento y un estudio previo de la documentación antes de que tomes ninguna decisión.</p>
+        <div class="equipo-tags">
+          <span class="equipo-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Segunda Oportunidad</span>
+          <span class="equipo-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cláusulas abusivas</span>
+          <span class="equipo-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Trato próximo</span>
+          <span class="equipo-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Atención personalizada</span>
         </div>
-        <p>Alba es abogada en ejercicio. Especialista en el ámbito del Derecho Mercantil relacionado con la Ley de Segunda Oportunidad, su interés por el Derecho Penal nace desde los inicios de sus estudios y continúa durante toda su carrera.</p>
-        <p>«La mejor estrategia de defensa que puede diseñar un abogado siempre parte de la versión de los hechos que ofrece el cliente».</p>
-        <div class="form-t">Formación</div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Grado en Derecho — Universidad de Cádiz (UCA)</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Máster de Acceso a la Abogacía — UCA con el Iltre. Colegio de Abogados de Jerez de la Frontera</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Curso en Violencia de Género — Fundación Municipal de la Mujer, Ayuntamiento de Cádiz</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Curso en Peritaje Judicial</li>
-        </ul>
+        <button class="btn" onclick="openChat()">Pedir consulta gratuita</button>
       </div>
     </div>
   </div>
@@ -817,6 +829,17 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
           <a href="https://mhcabogados.com/" target="_blank" rel="noopener" aria-label="LinkedIn de MHC Abogados"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.5 4.7 5.9V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z"/></svg></a>
           <a href="https://maps.app.goo.gl/XuaVQiJ7uDNuhKMc6" target="_blank" rel="noopener" aria-label="MHC Abogados en Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
+        <figure class="contact-media reveal">
+          <div class="framed">
+            <div class="ph">
+              <picture>
+                <source srcset="img/hall.webp" type="image/webp">
+                <img src="img/hall.jpg" alt="Patio interior con lucernario acristalado, barandillas de hierro y suelo ajedrezado de mármol en la sede de MHC Abogados" width="640" height="760" loading="lazy" decoding="async">
+              </picture>
+            </div>
+          </div>
+          <figcaption>La sede del despacho, en Pl. San Agustín, 2 (Cádiz).</figcaption>
+        </figure>
       </div>
       <div class="contact-cta reveal" id="agente-ia">
         <h3>Consulta gratuita</h3>
