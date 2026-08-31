@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Abogados en Cádiz · Segunda Oportunidad · MHC Abogados</title>
 <meta name="description" content="MHC Abogados, despacho en Cádiz especializado en Ley de Segunda Oportunidad y cláusulas abusivas. También divorcios y familia, herencias y contratos." />
 <meta name="author" content="MHC Abogados" />
@@ -346,7 +346,7 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
 .fab .ripple:nth-child(2){animation-delay:.93s}
 .fab .ripple:nth-child(3){animation-delay:1.86s}
 @keyframes fabripple{0%{transform:scale(1);opacity:.55}70%{opacity:.12}100%{transform:scale(2.1);opacity:0}}
-.chat{position:fixed;right:26px;bottom:26px;z-index:960;width:392px;max-width:calc(100vw - 32px);height:620px;max-height:calc(100vh - 40px);background:#fff;border:1px solid var(--line);border-radius:18px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 40px 90px -36px rgba(4,120,87,.55),0 8px 26px -18px rgba(0,0,0,.25);transform:translateY(30px) scale(.96);opacity:0;pointer-events:none;transition:transform .35s cubic-bezier(.16,1,.3,1),opacity .35s}
+.chat{position:fixed;right:26px;bottom:26px;z-index:960;width:392px;max-width:calc(100vw - 32px);height:620px;max-height:calc(100vh - 40px);max-height:min(calc(100dvh - 40px),620px);background:#fff;border:1px solid var(--line);border-radius:18px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 40px 90px -36px rgba(4,120,87,.55),0 8px 26px -18px rgba(0,0,0,.25);transform:translateY(30px) scale(.96);opacity:0;pointer-events:none;transition:transform .35s cubic-bezier(.16,1,.3,1),opacity .35s}
 .chat.open{transform:none;opacity:1;pointer-events:auto}
 .chat-head{display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--bg2);border-bottom:1px solid var(--line)}
 .chat-ava{width:46px;height:46px;border-radius:12px;background:var(--em-d);display:grid;place-items:center;flex-shrink:0}
@@ -356,10 +356,10 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
 .chat-head .hi small i{width:7px;height:7px;border-radius:50%;background:var(--em);display:inline-block}
 .chat-x{margin-left:auto;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.5rem;line-height:1;padding:4px 8px;transition:color .2s}
 .chat-x:hover{color:var(--text)}
-.chat-body{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:14px;scrollbar-width:thin;scrollbar-color:var(--em-l) transparent}
+.chat-body{flex:1;min-width:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding:20px;display:flex;flex-direction:column;gap:14px;scrollbar-width:thin;scrollbar-color:var(--em-l) transparent}
 .chat-body::-webkit-scrollbar{width:6px}
 .chat-body::-webkit-scrollbar-thumb{background:var(--em-ll);border-radius:3px}
-.msg{max-width:86%;padding:12px 15px;border-radius:14px;font-size:.89rem;line-height:1.5;white-space:pre-wrap;word-wrap:break-word;animation:msgin .35s ease}
+.msg{max-width:86%;min-width:0;padding:12px 15px;border-radius:14px;font-size:.89rem;line-height:1.5;white-space:pre-wrap;word-wrap:break-word;overflow-wrap:anywhere;animation:msgin .35s ease}
 @keyframes msgin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .msg.bot{align-self:flex-start;background:var(--bg2);border:1px solid var(--line);border-bottom-left-radius:4px;color:var(--text)}
 .msg.me{align-self:flex-end;background:var(--em-d);color:#fff;font-weight:500;border-bottom-right-radius:4px}
@@ -368,33 +368,33 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
 .typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
 @keyframes typing{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-4px)}}
 .quicks{display:flex;flex-wrap:wrap;gap:8px;padding:0 20px 14px}
-.quick{font-family:var(--body);font-size:.77rem;font-weight:500;border:1px solid var(--border);background:var(--soft);color:var(--em-dd);border-radius:100px;padding:8px 13px;cursor:pointer;transition:background .25s,transform .2s}
+.quick{font-family:var(--body);max-width:100%;overflow-wrap:anywhere;font-size:.77rem;font-weight:500;border:1px solid var(--border);background:var(--soft);color:var(--em-dd);border-radius:100px;padding:8px 13px;cursor:pointer;transition:background .25s,transform .2s}
 .quick:hover{background:#d5f6e7;transform:translateY(-2px)}
 /* Chips de triaje + agenda */
 .opts{display:flex;flex-wrap:wrap;gap:8px;align-self:flex-start;max-width:100%;animation:msgin .35s ease}
-.opt{font-family:var(--body);font-size:.82rem;font-weight:500;border:1px solid var(--border);background:var(--soft);color:var(--em-dd);border-radius:100px;padding:9px 14px;cursor:pointer;transition:background .2s,transform .18s}
+.opt{font-family:var(--body);max-width:100%;overflow-wrap:anywhere;font-size:.82rem;font-weight:500;border:1px solid var(--border);background:var(--soft);color:var(--em-dd);border-radius:100px;padding:9px 14px;cursor:pointer;transition:background .2s,transform .18s}
 .opt:hover:not(:disabled){background:#d5f6e7;transform:translateY(-2px)}
 .opt.sel{background:var(--em-d);color:#fff;border-color:var(--em-d)}
 .opts.locked .opt:not(.sel){opacity:.4;cursor:default}
-.cal{align-self:flex-start;width:292px;max-width:100%;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;animation:msgin .35s ease}
+.cal{align-self:flex-start;width:100%;max-width:292px;min-width:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;animation:msgin .35s ease}
 .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .cal-title{font-family:var(--display);font-weight:700;text-transform:capitalize;font-size:.94rem;color:var(--text)}
 .cal-nav{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--text);cursor:pointer;font-size:1.15rem;line-height:1;display:grid;place-items:center;transition:border-color .2s,color .2s}
 .cal-nav:hover:not(:disabled){border-color:var(--em-d);color:var(--em-d)}
 .cal-nav:disabled{opacity:.3;cursor:default}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;min-width:0}
 .cal-dow{margin-bottom:6px}
-.cal-dow span{text-align:center;font-size:.61rem;color:var(--muted);font-weight:600;padding:2px 0;text-transform:uppercase}
-.cal-day{aspect-ratio:1;border:none;background:transparent;color:var(--text);border-radius:8px;cursor:pointer;font-family:var(--body);font-size:.78rem;display:grid;place-items:center;transition:background .18s,color .18s}
+.cal-dow span{text-align:center;min-width:0;font-size:clamp(.54rem,2.4vw,.61rem);color:var(--muted);font-weight:600;padding:2px 0;text-transform:uppercase}
+.cal-day{aspect-ratio:1;min-width:0;border:none;background:transparent;color:var(--text);border-radius:8px;cursor:pointer;font-family:var(--body);font-size:clamp(.68rem,3vw,.78rem);display:grid;place-items:center;transition:background .18s,color .18s}
 .cal-day:hover:not(:disabled){background:var(--soft);color:var(--em-d)}
 .cal-day.disabled{color:var(--muted);opacity:.32;cursor:default}
 .cal-day.empty{cursor:default}
 .cal-day.sel{background:var(--em-d);color:#fff}
 .cal.locked .cal-day:not(.sel){opacity:.4;cursor:default}
-.chat-input{display:flex;gap:10px;padding:14px 16px;border-top:1px solid var(--line);background:var(--bg2)}
-.chat-input input{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;color:var(--text);padding:12px 14px;font-family:var(--body);font-size:.89rem;outline:none;transition:border-color .25s}
+.chat-input{display:flex;align-items:center;gap:10px;min-width:0;padding:14px 16px;border-top:1px solid var(--line);background:var(--bg2)}
+.chat-input input{flex:1 1 auto;width:100%;min-width:0;max-width:100%;background:#fff;border:1px solid var(--line);border-radius:10px;color:var(--text);padding:12px 14px;font-family:var(--body);font-size:.89rem;outline:none;transition:border-color .25s}
 .chat-input input:focus{border-color:var(--em-d)}
-.chat-input button{background:var(--em-d);border:none;border-radius:10px;width:46px;cursor:pointer;display:grid;place-items:center;flex-shrink:0;transition:transform .2s,opacity .2s}
+.chat-input button{background:var(--em-d);border:none;border-radius:10px;width:46px;height:46px;flex:0 0 46px;cursor:pointer;display:grid;place-items:center;flex-shrink:0;transition:transform .2s,opacity .2s}
 .chat-input button:hover{transform:scale(1.06)}
 .chat-input button:disabled{opacity:.45;cursor:default}
 .chat-input button svg{width:20px;height:20px;color:#fff}
@@ -436,8 +436,24 @@ footer.foot{border-top:1px solid var(--line);padding:32px 0;margin-top:100px}
   .hero-stats{grid-template-columns:1fr 1fr}
   .tag-badge{left:50%;transform:translateX(-50%);bottom:-18px}
   .contact-cta{padding:30px 22px}
-  .chat{right:0;bottom:0;width:100vw;height:100dvh;max-height:100dvh;border-radius:0}
-  .fab{right:18px;bottom:18px}
+  /* CHAT EN MOVIL — hoja a pantalla completa que nunca sale del viewport.
+     100dvh (no 100vh) para que la barra del navegador y el teclado no corten
+     el input: al abrirse el teclado el viewport dinamico encoge y el panel
+     con el. Se deja el fallback en vh para navegadores sin dvh. */
+  .chat{
+    left:0;right:0;bottom:0;top:auto;
+    width:100%;max-width:100vw;
+    height:100vh;height:100dvh;
+    max-height:100vh;max-height:100dvh;
+    border-radius:16px 16px 0 0;
+    border-left:0;border-right:0;border-bottom:0;
+  }
+  .chat-body{padding:16px}
+  .quicks{padding:0 16px 12px}
+  .chat-input{padding:12px 14px}
+  /* notch/gesto inferior de iPhone */
+  .chat-foot{padding-bottom:calc(7px + env(safe-area-inset-bottom,0px))}
+  .fab{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px))}
   .foot-inner{flex-direction:column;text-align:center;gap:20px}
 }
 @media(prefers-reduced-motion:reduce){
